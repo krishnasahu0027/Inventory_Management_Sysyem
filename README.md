@@ -19,17 +19,8 @@
 - Indian Rupee formatting
 - Saves changes in the current browser
 
-## Run
-1. Extract the ZIP.
-2. Keep all six files in the same folder.
-3. Open `Index.html` in a modern browser.
-4. Try adding, editing, searching, and deleting products.
 
-No build tools are required.
 
-## Important
-This is a front-end prototype, not a complete Java/Spring Boot backend. The assignment's full architecture can connect this interface to a Java Spring Boot REST
-API and MySQL database. Data currently stays in browser `localStorage`.
 
 
 
