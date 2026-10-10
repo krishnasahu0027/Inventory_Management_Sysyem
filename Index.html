@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Inventory Management System</title>
+<link rel="stylesheet" href="Styles.css">
+<script src="Data.js" defer></script><script src="app.js" defer></script>
+</head>
+<body>
+<header><div class="logo">IM</div><div><h1>Inventory Manager</h1><p>Small business stock dashboard</p></div><span class="tag">Yuva Intern · Week 1</span></header>
+<main>
+<section class="welcome"><div><small>OVERVIEW</small><h2>Inventory at a glance</h2><p>Manage products and monitor stock levels.</p></div><button id="addProductButton">＋ Add product</button></section>
+<section class="stats">
+<article><span>Total products</span><strong id="totalProducts">0</strong></article>
+<article><span>Units in stock</span><strong id="totalUnits">0</strong></article>
+<article><span>Inventory value</span><strong id="inventoryValue">₹0</strong></article>
+<article class="alert"><span>Low-stock items</span><strong id="lowStock">0</strong></article>
+</section>
+<section class="panel"><div class="panel-head"><div><h2>Product inventory</h2><p>Search, add, edit, or remove products.</p></div><input id="searchInput" type="search" placeholder="Search name, SKU, category…"></div>
+<div class="table-wrap"><table><thead><tr><th>Product / SKU</th><th>Category</th><th>Price</th><th>Quantity</th><th>Reorder level</th><th>Status</th><th>Actions</th></tr></thead><tbody id="productRows"></tbody></table></div>
+<div class="panel-foot"><span>Changes are saved in this browser.</span><button id="resetDemoButton" class="link">Reset demo data</button></div></section>
+<p class="note">This is a front-end prototype. A production version can connect to a Java Spring Boot REST API and MySQL database.</p>
+</main>
+<dialog id="productDialog"><form id="productForm"><div class="dialog-head"><h2 id="dialogTitle">Add product</h2><button type="button" id="closeButton" class="close">×</button></div>
+<input id="productId" type="hidden">
+<div class="fields">
+<label>Product name<input id="name" required maxlength="80"></label>
+<label>SKU<input id="sku" required maxlength="30"></label>
+<label>Category<input id="category" required maxlength="50"></label>
+<label>Unit price (₹)<input id="price" type="number" required min="0" step="0.01"></label>
+<label>Quantity<input id="quantity" type="number" required min="0" step="1"></label>
+<label>Reorder level<input id="reorderLevel" type="number" required min="0" step="1" value="5"></label>
+</div><div class="actions"><button type="button" id="cancelButton" class="secondary">Cancel</button><button type="submit">Save product</button></div>
+</form></dialog>
+<footer>Inventory Management System · Internship Assignment</footer>
+</body></html>

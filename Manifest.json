@@ -1,0 +1,10 @@
+{
+  "name": "Inventory Management System",
+  "short_name": "Inventory",
+  "description": "Responsive inventory dashboard prototype for a small retail business.",
+  "start_url": "./Index.html",
+  "display": "standalone",
+  "background_color": "#f5f7fb",
+  "theme_color": "#f06423",
+  "icons": []
+}
